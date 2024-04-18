@@ -1,0 +1,98 @@
+<!--
+    Validator Notes:
+    Got error for action="" this is expected and will be fixed as the backend is implamented.
+    Got warning Article lacks heading. This is ignored because the instructions on Canvas did not ask for a heading.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/main.css">
+    <script src="src/program.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Finlay Christ</title>
+</head>
+
+<body>
+    <header>
+        <h1>Finlay Christ</h1>
+
+        <nav>
+            <div id="nav-container">
+                <div class="nav-button" onclick="(window.location.href = '../../index.html')">
+                    <p class="nav-link">All Homework</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'index.html')">
+                    <p class="nav-link">Home</p>
+                </div>
+                <div class="nav-button" onclick="window.open('contact.html')">
+                    <p class="nav-link">Contact</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'intrests.html')">
+                    <p class="nav-link">About Me</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'style.html')">
+                    <p class="nav-link">Style</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contact</h2>
+
+            <article>
+                <p>
+                    To reach out to our support team or ask a question please type your information below then press
+                    submit and we will be with you as soon as possible.
+                </p>
+                <form method="get" action="">
+                    <fieldset>
+                        <legend>Support Inquiry Request Form</legend>
+
+                        <label>Name:</label>
+                        <input type="text" name="name" placeholder="First Last" required>
+                        <br><br>
+
+                        <label>Email:</label>
+                        <input type="email" name="email" placeholder="YourEmail@example.com" required>
+                        <br><br>
+
+                        <label>Inquiry:</label>
+                        <textarea name="inquiry" placeholder="I need help with..." required></textarea>
+                        <br><br>
+
+                        <label>Support Type</label>
+                        <select name="type" required>
+                            <option value="">Other/Unknown</option>
+                            <option value="signin">Sign In Issue</option>
+                            <option value="error">Error Message</option>
+                            <option value="loading">Loading Slowly</option>
+                        </select>
+                        <br><br>
+
+                        <label>Priority:</label>
+                        <label>Low</label><input type="radio" name="priority" value="low">
+                        <label>Standard</label><input type="radio" name="priority" checked="checked" value="standard">
+                        <label>High</label><input type="radio" name="priority" value="high">
+                        <br><br>
+
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            This website was made by Finlay Christ for CS290 at Oregon State University in Spring of 2024.<br>
+            <span id="copy-symbole">&copy;</span> 2024 Finlay Christ - All rights reserved
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/main.css">
+    <script src="src/program.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home - Finlay Christ</title>
+</head>
+
+<body>
+    <header>
+        <h1>Finlay Christ</h1>
+
+        <nav>
+            <div id="nav-container">
+                <div class="nav-button" onclick="(window.location.href = '../../index.html')">
+                    <p class="nav-link">All Homework</p>
+                </div>
+                <div class="nav-button" onclick="window.open('index.html')">
+                    <p class="nav-link">Home</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'contact.html')">
+                    <p class="nav-link">Contact</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'intrests.html')">
+                    <p class="nav-link">About Me</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'style.html')">
+                    <p class="nav-link">Style</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Web Dev Concepts</h2>
+
+            <article>
+                <h3>Definition of Terms</h3>
+                <p>
+                    Website: A website is a unified collection of pages designed to be viewed with a web browser. A
+                    website
+                    is
+                    usually hosted by a server on a domain with various html files coorisponding to each page on the
+                    website.
+                    Websites also often contain css and javascript files to add additional functionality and
+                    customization
+                    to
+                    each page.
+                </p>
+                <p>
+                    Web Application: Similar to a website a web application is a set of files and code designed to be
+                    viewed
+                    in
+                    a web browser. However, web applications are often more interactive offering features like dynamic
+                    graphics
+                    and audio instead of just static text and links.
+                </p>
+                <p>
+                    Web Browser: A web browser is a standalone application designed to preforms various web and internet
+                    related
+                    tasks including downloading pages and facilitating communications with a web server as well as its
+                    primary
+                    function to render and display html pages and execute javascript in a contained environment.
+                </p>
+                <p>
+                    Web Server: A web server is an application designed to respond and process requests from a web
+                    client or
+                    web
+                    browser. A typical web server is able to handle many differing types of requests to download content
+                    or
+                    modify database values in response to client requests.
+                </p>
+                <p>
+                    HTTP Request: The HTTP or hypertext transfer protocol is a set of standards for how a server and
+                    client
+                    will
+                    communicate and what requests/responses are allowed. An HTTP request is a part of the HTTP protocol
+                    which
+                    defines a request sent by the client to the server. A typical HTTP request might as the server for
+                    the
+                    html
+                    contents of a specified page or ask to insert a value into a database.
+                </p>
+                <p>
+                    HTTP Response: Similar to an HTTP request an HTTP response is also part of the HTTP protocol however
+                    it
+                    specifies a response from the server to the client in response to a request. A typical HTTP response
+                    would
+                    either state that the action was completed succesfully and then return the requested data or would
+                    outline
+                    an error which occured when processing a request.
+                </p>
+            </article>
+
+            <article>
+                <h3>Frontend Design</h3>
+                <p>
+                    The fundamental concept of frontend design is about using styles and links to organize the content
+                    you
+                    have in a readable and easy to find manner that allows users to quickly navigate to what they want
+                    and
+                    easily discover what your site has to offer. Good front end design is almost invisible and is so
+                    seemless that the user doesn't notice it is there and is free to focus only on the content or task
+                    they
+                    are trying to do.
+                </p>
+                <dl>
+                    <dt>Effective</dt>
+                    <dd>A website must be effective at allowing users to achive their goals.</dd>
+
+                    <dt>Efficient</dt>
+                    <dd>A website must be efficient so users can preform common tasks with the fewest number of steps.
+                    </dd>
+
+                    <dt>Easy To Naviage</dt>
+                    <dd>Websites must be easy to navigate especially for new users.</dd>
+
+                    <dt>Error Free</dt>
+                    <dd>Websites must be free from errors or warnings to ensure proper compatibility with accessability
+                        tools and browsers.</dd>
+
+                    <dt>Enjoyable</dt>
+                    <dd>Websites must be engaging and enjoyable to use so users will want to come back.</dd>
+                </dl>
+                <p>
+                    Many beginners think that page layout tags like h1 h2 or p are disigned only to alter the size and
+                    font
+                    of text but this couldn't be farther from the truth. The styling of elements can always be changed
+                    later
+                    with css and classes. The point of different tags is to symbolize to the browers and to screen
+                    readers
+                    the intent of different peices of text or sections of content. These tags allow assistive
+                    technologies
+                    to know what content is the main body vs what is side thoughts or citations and therefore properly
+                    organizing your content with the appropriate containers and tags is vital for users using assistive
+                    technologies.
+                </p>
+                <table>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;h1&gt;</td>
+                        <td>Used for a high level heading. Lower level headings like &lt;h2&gt; can be used as titles
+                            for
+                            sub-sections.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;p&gt;</td>
+                        <td>Used for large blocks of text or paragraphs in an article.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;body&gt;</td>
+                        <td>This tag contains all the content in the website's main viewport.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;footer&gt;</td>
+                        <td>Used to as a container for elements in a page's footer.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;nav&gt;</td>
+                        <td>Used as a container for elements in the navigation bar. Usually at the top of the page.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;article&gt;</td>
+                        <td>Used as a container to hold elements together that represent a single thought or idea.</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            This website was made by Finlay Christ for CS290 at Oregon State University in Spring of 2024.<br>
+            <span id="copy-symbole">&copy;</span> 2024 Finlay Christ - All rights reserved
+        </p>
+    </footer>
+</body>
+
+</html>

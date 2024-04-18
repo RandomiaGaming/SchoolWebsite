@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/main.css">
+    <script src="src/program.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Finlay Christ</title>
+</head>
+
+<body>
+    <header>
+        <h1>Finlay Christ</h1>
+
+        <nav>
+            <div id="nav-container">
+                <div class="nav-button" onclick="(window.location.href = '../../index.html')">
+                    <p class="nav-link">All Homework</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'index.html')">
+                    <p class="nav-link">Home</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'contact.html')">
+                    <p class="nav-link">Contact</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'intrests.html')">
+                    <p class="nav-link">About Me</p>
+                </div>
+                <div class="nav-button" onclick="window.open('style.html')">
+                    <p class="nav-link">Style</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Styles</h2>
+
+            <article>
+                <h3>Locations</h3>
+                <p>Styles can be defined in many locations. In a separate .css file like what is done for most styles on
+                    this website. In a &lt;style&gt; tag like what I used before migration to an external stylesheet. Or
+                    they can be defined within the style attribute like what was done for the width and height of the
+                    It's free real estate gif on the intrests.html page. Finally in very rare circumstances or on older
+                    web pages styles can be defined with certain special use case attributes such as the bgcolor
+                    attribute.</p>
+            </article>
+
+            <article>
+                <h3>Selectors</h3>
+                <p>There are tons of css selectors. Here are a few:</p>
+                <table style="background-image: url(imgs/CageolasNic.jpg); background-size: cover; color: white;">
+                    <tr>
+                        <th>Selector</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>h1</td>
+                        <td>Selects all h1 tags.</td>
+                    </tr>
+                    <tr>
+                        <td>.content-container</td>
+                        <td>Selects all tags with the content-container class.</td>
+                    </tr>
+                    <tr>
+                        <td>#submit-button</td>
+                        <td>Selects the element with the id submit-button.</td>
+                    </tr>
+                    <tr>
+                        <td>div p</td>
+                        <td>Selects all the p tags which are decendants of a div.</td>
+                    </tr>
+                    <tr>
+                        <td>div > p</td>
+                        <td>Selects all p tags which are children of a div.</td>
+                    </tr>
+                    <tr>
+                        <td>h2 + p</td>
+                        <td>Selects all p tags which are a sibling of an h2.</td>
+                    </tr>
+                    <tr>
+                        <td>input[type="email"]</td>
+                        <td>Selects all input tags which have the attribute type="email".</td>
+                    </tr>
+                    <tr>
+                        <td>a:hover</td>
+                        <td>Selects all a tags which are currently being hovered over.</td>
+                    </tr>
+                    <tr>
+                        <td>a::first-line</td>
+                        <td>Selects the first line of every a tag.</td>
+                    </tr>
+                </table>
+            </article>
+
+            <article>
+                <h3>Box Model</h3>
+                <p>The box model is how CSS and by extension web browsers determine how much space an element should
+                    take up on the screen. It is based upon a collection of rectangles each one containing the last. The
+                    smallest rectangle is the content of the element. This box contains the text of the element. Next is
+                    the padding box, boarder box, and finally encapsulating all the others is the margine box.</p>
+            </article>
+
+            <article>
+                <h3>Inheritance &amp; Specificity</h3>
+                <p>In css there are times where a different value for a style is defined in different places. In these
+                    situations there is a competition to see which style is actually used. Luckily there are rules for
+                    which styles take priorety.</p>
+                <ol>
+                    <li>Styles marked with !important.</li>
+                    <li>Styles applied with attributes.</li>
+                    <li>Styles applied to an id.</li>
+                    <li>Styles applied to a class.</li>
+                    <li>Styles applied to a tag.</li>
+                </ol>
+                <p>
+                    Additionally styles which apply to a child tag always take prioerty over those inherited from the
+                    parent.
+                    <br>
+                    If two styles are of identical priority the one who was declared furthar down in the document takes
+                    priority. Last seen &gt; first seen.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            This website was made by Finlay Christ for CS290 at Oregon State University in Spring of 2024.<br>
+            <span id="copy-symbole">&copy;</span> 2024 Finlay Christ - All rights reserved
+        </p>
+    </footer>
+</body>
+
+</html>
