@@ -1,0 +1,112 @@
+<!--
+Class: CS290 Web Development
+Assignment: Homework 5 JavaScript Game
+Student Name: Finlay Christ
+Students In Group: 1
+Date: 05/04/2024
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="layout.js"></script>
+    <script src="game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <main>
+            <header id="header" class="panel">
+                <h1 id="title">Mystical Mathmatics</h1>
+                <p class="highscore">You solved <span class="highscore" id="highscore-number">150</span> puzzles!</p>
+            </header>
+            <br>
+            <section class="panel">
+                <h2 id="goal-text">Use all numbers and end with <span id="goal-number">0</span></h2>
+                <br>
+                <div class="dash-break"></div>
+                <br>
+                <div id="equation" class="tile-container">
+                </div>
+                <br>
+                <div class="dash-break"></div>
+                <br>
+                <div id="numbers" class="tile-container">
+                </div>
+                <br>
+                <div class="tile-container">
+                    <div class="tile interactive-tile" onclick="action('+')">
+                        <p class="tile-text">+</p>
+                    </div>
+                    <div class="tile interactive-tile" onclick="action('-')">
+                        <p class="tile-text">-</p>
+                    </div>
+                    <div class="tile interactive-tile" onclick="action('*')">
+                        <p class="tile-text">*</p>
+                    </div>
+                    <div class="tile interactive-tile" onclick="action('%')">
+                        <p class="tile-text">%</p>
+                    </div>
+                    <div class="tile interactive-tile" onclick="action('equals')">
+                        <p class="tile-text">=</p>
+                    </div>
+                </div>
+                <br>
+                <div class="tile-container">
+                    <div class="tile interactive-tile" onclick="action('undo')">
+                        <p class="tile-text">&#x21A9;</p>
+                    </div>
+                    <div class="tile interactive-tile" onclick="action('redo')">
+                        <p class="tile-text">&#x21AA;</p>
+                    </div>
+                    <div class="tile interactive-tile" onclick="action('newgame')">
+                        <p class="tile-text">&#x27F3;</p>
+                    </div>
+                </div>
+                <br>
+                <div class="dash-break"></div>
+                <div id="log">
+                </div>
+            </section>
+        </main>
+        <br>
+        <footer id="footer" class="panel">
+            <h3 class="footer-text">Instructions:</h3>
+            <p>
+                Build an expression with two numbers and an operator.
+                <br>
+                Press equals to solve expression and get a new number.
+                <br>
+                Each expression is built from the result of the last.
+                <br>
+                When you run out of numbers the game is over.
+                <br>
+                If the last expression equals the goal then you WIN!
+                <br>
+                Note that you must use all the numbers to win.
+                <br>
+                You can use each operator as many times as you want.
+                <br>
+                If you make a mistake use undo &#x21A9; and redo &#x21AA; to try again.
+                <br>
+                Use &#x27F3; to give up and generate a new goal.
+                <br>
+                Good luck and have fun!
+            </p>
+            <br>
+            <h3 class="footer-text">Finlay Christ - 05/03/2024</h3>
+        </footer>
+    </div>
+    <div style="display: none" id="popup-container">
+        <div id="popup">
+            <h1 id="popup-title">You Win!</h1>
+            <button id="popup-button" onclick="newGame()">New Game!</button>
+        </div>
+    </div>
+    <div id="background"></div>
+</body>
+
+</html>

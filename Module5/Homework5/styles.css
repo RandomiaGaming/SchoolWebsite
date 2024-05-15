@@ -1,0 +1,230 @@
+/*
+Class: CS290 Web Development
+Assignment: Homework 5 JavaScript Game
+Student Name: Finlay Christ
+Students In Group: 1
+Date: 05/04/2024
+*/
+
+/* Variables */
+:root {
+    --tile-size: 75px;
+    --tile-scaling-factor: 14;
+    --target-aspect: calc(12 / 9);
+    --back-img-aspect: calc(512 / 224);
+    --back-img-repeats: 4;
+    --back-img-anim-length: 45s;
+    --scrollbar-width: 15px;
+}
+
+/* General Styles */
+* {
+    font-size: 1.1em;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-align: center;
+}
+
+/* Container Styles */
+.panel {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 0px;
+    margin: 0px;
+    padding: 30px;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    /* Get Flexy */
+    display: flex;
+    justify-content: center;
+}
+
+#header {
+    border-radius: 0px 0px 30px 30px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: calc(var(--target-aspect) * 100vh);
+    max-width: calc(var(--target-aspect) * 100vh);
+
+    border-radius: 30px 30px 0px 0px;
+}
+
+.dash-break {
+    width: 100%;
+    background-color: white;
+    height: 5px;
+}
+
+/* Tile Containers and Tiles */
+.tile-container {
+    width: 100%;
+    height: var(--tile-size);
+    max-height: var(--tile-size);
+    /* Get Flexy */
+    display: flex;
+    justify-content: center;
+}
+
+.tile {
+    min-width: var(--tile-size);
+    height: var(--tile-size);
+    max-height: var(--tile-size);
+    border: calc(var(--tile-size) / 15) solid white;
+    border-radius: calc(var(--tile-size) / 4);
+    margin: 0px calc(var(--tile-size) / 5) 0px calc(var(--tile-size) / 5);
+    /* Get Flexy */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interactive-tile:hover {
+    border: calc(var(--tile-size) / 15) solid violet;
+}
+
+.interactive-tile:active {
+    border: calc(var(--tile-size) / 15) solid purple;
+}
+
+.tile-text {
+    font-size: 2em;
+    font-weight: 900;
+    border: 0px;
+    margin: 0px 15px 0px 15px;
+    padding: 0px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.interactive-tile:hover .tile-text {
+    color: violet;
+}
+
+.interactive-tile:active .tile-text {
+    color: purple;
+}
+
+/* Animated Background */
+#background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: calc(var(--back-img-aspect) * var(--back-img-repeats) * 100vh);
+    height: 100vh;
+    background-image: url('Background.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    animation: scrollBackground var(--back-img-anim-length) linear infinite;
+    image-rendering: pixelated;
+    z-index: -1;
+}
+
+@keyframes scrollBackground {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% / var(--back-img-repeats)));
+    }
+}
+
+/* PopUp */
+#popup-container {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+#popup {
+    background-color: whitesmoke;
+    border-radius: 30px;
+    position: fixed;
+    width: 75vw;
+    height: 75vh;
+    top: 12.5vh;
+    left: 12.5vw;
+}
+
+#popup-title {
+    color: black;
+    font-size: 3em;
+    padding: 45px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 75vw;
+    height: auto;
+    top: 22.5vh;
+    left: 12.5vw;
+}
+
+#popup-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-size: 2em;
+
+    border-radius: 30px;
+    border: 5px solid black;
+    padding: 15px;
+
+    position: fixed;
+    width: 65vw;
+    height: auto;
+    bottom: 27.5vh;
+    left: 17.5vw;
+}
+
+#popup-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#popup-button:active {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Text Styles */
+.highscore {
+    font-size: 1.1em;
+}
+
+#title {
+    font-size: 2.5em;
+}
+
+#goal-text {
+    font-size: 2em;
+}
+
+.footer-text {
+    font-size: 1.5em;
+}
+
+br {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
