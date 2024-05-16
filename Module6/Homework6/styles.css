@@ -1,0 +1,124 @@
+:root {
+    --target-aspect-ratio: calc((16 / 9) / 2);
+    --min-container-width: calc(1920px / 3);
+    --corner-radius: 30px;
+    --container-padding: 30px;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-size: 12pt;
+    color: black;
+    line-height: 1.5;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(62, 62, 62);
+    width: 100vw;
+    height: 100vh;
+    /* Get Flexy */
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#useable-region {
+    max-width: 100vw;
+    width: calc(var(--target-aspect-ratio) * 100vh);
+    height: 100vh;
+}
+
+#scrollable-region {
+    width: 100%;
+}
+
+#content {
+    background-color: cornflowerblue;
+    width: 100%;
+    border-radius: var(--corner-radius);
+    padding: var(--container-padding);
+}
+
+#response {
+    background-color: cornflowerblue;
+    width: 100%;
+    border-radius: var(--corner-radius);
+    padding: var(--container-padding);
+}
+
+header {
+    background-color: cornflowerblue;
+    width: 100%;
+    border-radius: 0px 0px var(--corner-radius) var(--corner-radius);
+    padding: var(--container-padding);
+}
+
+footer {
+    background-color: cornflowerblue;
+    max-width: 100vw;
+    width: calc(var(--target-aspect-ratio) * 100vh);
+    border-radius: var(--corner-radius) var(--corner-radius) 0px 0px;
+    padding: var(--container-padding);
+}
+
+#header-text {
+    font-size: 35pt;
+}
+
+#footer-text {
+    font-size: 20pt;
+}
+
+#instructions {
+    font-size: 20pt;
+}
+
+.form-text {
+    font-size: 15pt;
+}
+
+#submit-button {
+    background-color: white;
+    width: 55%;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 15pt;
+}
+
+#submit-button:hover {
+    background-color: rgb(175, 175, 175);
+}
+
+#submit-button:active {
+    background-color: rgb(100, 100, 100);
+}
+
+.response-lable {
+    font-size: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 2px solid #000;
+    padding: 10px;
+}
+
+th {
+    background-color: white;
+    font-size: 14pt;
+}
+
+td {
+    font-size: 13pt;
+}

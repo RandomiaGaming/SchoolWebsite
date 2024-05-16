@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="layout.js"></script>
+    <script src="weather.js"></script>
+    <title>Weather API - Finlay Christ</title>
+</head>
+
+<body>
+    <main id="useable-region">
+        <section id="scrollable-region">
+            <header id="header">
+                <h1 id="header-text">Weather Comparison</h1>
+            </header>
+            <br>
+            <article id="content">
+                <h2 id="instructions">Enter the name of two cities below:</h2>
+                <br>
+                <form>
+                    <div>
+                        <label class="form-text" for="city1">City 1</label>
+                        <input class="form-text" type="text" name="city1" id="city1" value="Corvallis" required>
+
+                        <label class="form-text" for="state1">State 1</label>
+                        <select class="form-text" name="state1" id="state1">
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon" selected>Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label class="form-text" for="city2">City 2</label>
+                        <input class="form-text" type="text" name="city2" id="city2" value="Portland" required>
+
+                        <label class="form-text" for="state2">State 2</label>
+                        <select class="form-text" name="state2" id="state2">
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon" selected>Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label>
+                            <input class="form-text" type="radio" name="units" value="Fahrenheit" checked>Fahrenheit
+                        </label>
+                        <label>
+                            <input class="form-text" type="radio" name="units" value="Celsius">Celsius
+                        </label>
+                    </div>
+                    <br>
+                    <button id="submit-button" type="submit">Check Weather!</button>
+                </form>
+            </article>
+            <br>
+            <article id="response" style="display: none;">
+                <h3 id="response1-city" class="response-lable">Corvallis Oregon</h3>
+                <table id="table1">
+                    <tr>
+                        <th></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                    <tr>
+                        <th>High:</th>
+                        <td id="response1-high1">ERROR</td>
+                        <td id="response1-high2">ERROR</td>
+                        <td id="response1-high3">ERROR</td>
+                        <td id="response1-high4">ERROR</td>
+                        <td id="response1-high5">ERROR</td>
+                    </tr>
+                    <tr>
+                        <th>Low:</th>
+                        <td id="response1-low1">ERROR</td>
+                        <td id="response1-low2">ERROR</td>
+                        <td id="response1-low3">ERROR</td>
+                        <td id="response1-low4">ERROR</td>
+                        <td id="response1-low5">ERROR</td>
+                    </tr>
+                    <tr>
+                        <th>Outlook:</th>
+                        <td><img width="45px" height="45px" id="response1-outlook1" src="Outlooks/AwSnap.png">
+                        </td>
+                        <td><img width="45px" height="45px" id="response1-outlook2" src="Outlooks/AwSnap.png">
+                        </td>
+                        <td><img width="45px" height="45px" id="response1-outlook3" src="Outlooks/AwSnap.png">
+                        </td>
+                        <td><img width="45px" height="45px" id="response1-outlook4" src="Outlooks/AwSnap.png">
+                        </td>
+                        <td><img width="45px" height="45px" id="response1-outlook5" src="Outlooks/AwSnap.png">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h3 id="response2-city" class="response-lable">Portland Oregon</h3>
+                <table id="table2">
+                    <tr>
+                        <th></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                    <tr>
+                        <th>High:</th>
+                        <td id="response2-high1">ERROR</td>
+                        <td id="response2-high2">ERROR</td>
+                        <td id="response2-high3">ERROR</td>
+                        <td id="response2-high4">ERROR</td>
+                        <td id="response2-high5">ERROR</td>
+                    </tr>
+                    <tr>
+                        <th>Low:</th>
+                        <td id="response2-low1">ERROR</td>
+                        <td id="response2-low2">ERROR</td>
+                        <td id="response2-low3">ERROR</td>
+                        <td id="response2-low4">ERROR</td>
+                        <td id="response2-low5">ERROR</td>
+                    </tr>
+                    <tr>
+                        <th>Outlook:</th>
+                        <td><img width="45px" height="45px" id="response2-outlook1" src="Outlooks/AwSnap.png">
+                        </td>
+                        <td><img width="45px" height="45px" id="response2-outlook2" src="Outlooks/AwSnap.png">
+                        </td>
+                        <td><img width="45px" height="45px" id="response2-outlook3" src="Outlooks/AwSnap.png">
+                        </td>
+                        <td><img width="45px" height="45px" id="response2-outlook4" src="Outlooks/AwSnap.png">
+                        </td>
+                        <td><img width="45px" height="45px" id="response2-outlook5" src="Outlooks/AwSnap.png">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </article>
+            <br>
+        </section>
+        <footer id="footer" style="position: fixed; bottom: 0;">
+            <h4 id="footer-text">Finlay Christ - 05/03/2024</h4>
+        </footer>
+    </main>
+</body>
+
+</html>
