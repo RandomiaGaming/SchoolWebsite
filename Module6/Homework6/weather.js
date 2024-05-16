@@ -1,5 +1,15 @@
+/*
+Class: CS290 Web Development
+Assignment: Homework 6 Weather API
+Student Name: Finlay Christ
+Students In Group: 1
+Date: 05/16/2024
+*/
+
 const openWeatherMapAPIKey = "e5f4ecd904720c88a577abf7e089304c";
 const usaContryCode = 840;
+
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 const WMODataBase = [{ WMOCode: 0, WMOStatus: "Clear Sky", status: "Sun", outlookURL: "Outlooks/Sun.png" },
 { WMOCode: 1, WMOStatus: "Mainly Clear", status: "Sun", outlookURL: "Outlooks/Sun.png" },
@@ -58,6 +68,7 @@ async function onFormSubmit(event) {
 // Updates the response html to reflect comparison data.
 function updateResponse(compairison) {
     document.querySelector("#response").style.removeProperty("display");
+    let currentDay = new Date().getDay();
 
     if (compairison.weather1 !== undefined) {
         document.querySelector("#table1").style.removeProperty("display");
@@ -80,6 +91,12 @@ function updateResponse(compairison) {
         document.querySelector("#response1-outlook3").src = parseWMOCode(compairison.weather1[2].WMOCode);
         document.querySelector("#response1-outlook4").src = parseWMOCode(compairison.weather1[3].WMOCode);
         document.querySelector("#response1-outlook5").src = parseWMOCode(compairison.weather1[4].WMOCode);
+
+        document.querySelector("#response1-day1").textContent = daysOfWeek[(currentDay + 0) % 7];
+        document.querySelector("#response1-day2").textContent = daysOfWeek[(currentDay + 1) % 7];
+        document.querySelector("#response1-day3").textContent = daysOfWeek[(currentDay + 2) % 7];
+        document.querySelector("#response1-day4").textContent = daysOfWeek[(currentDay + 3) % 7];
+        document.querySelector("#response1-day5").textContent = daysOfWeek[(currentDay + 4) % 7];
     } else {
         document.querySelector("#table1").style.display = "none";
         document.querySelector("#response1-city").textContent = "Unable to get weather in " + compairison.city1 + " " + compairison.state1;
@@ -107,6 +124,12 @@ function updateResponse(compairison) {
         document.querySelector("#response2-outlook3").src = parseWMOCode(compairison.weather2[2].WMOCode);
         document.querySelector("#response2-outlook4").src = parseWMOCode(compairison.weather2[3].WMOCode);
         document.querySelector("#response2-outlook5").src = parseWMOCode(compairison.weather2[4].WMOCode);
+
+        document.querySelector("#response2-day1").textContent = daysOfWeek[(currentDay + 0) % 7];
+        document.querySelector("#response2-day2").textContent = daysOfWeek[(currentDay + 1) % 7];
+        document.querySelector("#response2-day3").textContent = daysOfWeek[(currentDay + 2) % 7];
+        document.querySelector("#response2-day4").textContent = daysOfWeek[(currentDay + 3) % 7];
+        document.querySelector("#response2-day5").textContent = daysOfWeek[(currentDay + 4) % 7];
     } else {
         document.querySelector("#table2").style.display = "none";
         document.querySelector("#response2-city").textContent = "Unable to get weather in " + compairison.city2 + " " + compairison.state2;
@@ -168,7 +191,8 @@ async function getCoordinates(city, state) {
 // Fetches a url and returns the result as a javascript object.
 async function queryAPI(url) {
     let response = await fetch(url);
-    return response.json();
+    let output = await response.json();
+    return output;
 }
 
 class Compairison {
