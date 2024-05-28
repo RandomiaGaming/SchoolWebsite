@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/main.css">
+    <script src="src/program.js"></script>
+    <title>Finlay Christ</title>
+</head>
+
+<body>
+    <header>
+        <h1>Finlay Christ</h1>
+
+        <nav>
+            <div id="nav-container">
+                <div class="nav-button" onclick="(window.location.href = 'index.html')">
+                    <p class="nav-link">Home</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'contact.html')">
+                    <p class="nav-link">Contact</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'intrests.html')">
+                    <p class="nav-link">About Me</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'style.html')">
+                    <p class="nav-link">Style</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <p>
+                To reach out to our support team or ask a question please type your information below then press
+                submit and we will be with you as soon as possible. To ask for help simply click on each of the
+                white boxes below and type the requested information. When you are done press Submit. Pressing
+                submit will send your help request off to our support team and they will reply as soon as possible.
+            </p>
+            <article>
+                <form method="post" action="/results">
+                    <fieldset>
+                        <legend>Support Inquiry Request Form</legend>
+
+                        <label>Name:</label>
+                        <br>
+                        <input type="text" name="name" placeholder="First Last" class="required" autofocus required>
+                        <br><br>
+
+                        <label>Email:</label>
+                        <br>
+                        <input type="email" name="email" placeholder="YourEmail@example.com" class="required" required>
+                        <br><br>
+
+                        <label>Message:</label>
+                        <br>
+                        <textarea name="message" placeholder="I need help with..." class="required" required></textarea>
+                        <br><br>
+
+                        <label>Department:</label>
+                        <br>
+                        <select name="department" required>
+                            <option value="" selected>Select One...</option>
+                            <option value="clothes">Clothes</option>
+                            <option value="food">Food</option>
+                            <option value="toys">Toys</option>
+                            <option value="crafts">Crafts</option>
+                        </select>
+                        <br><br>
+
+                        <label>Priority:</label>
+                        <br>
+                        <label>Low</label><input type="radio" name="priority" value="low">
+                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard</label><input type="radio" name="priority"
+                            checked="checked" value="standard">
+                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High</label><input type="radio" name="priority"
+                            value="high">
+                        <br><br>
+
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            This website was made by Finlay Christ for CS290 at Oregon State University in Spring of 2024.<br>
+            <span id="copy-symbole">&copy;</span> 2024 Finlay Christ - All rights reserved
+        </p>
+    </footer>
+</body>
+
+</html>

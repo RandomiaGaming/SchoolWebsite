@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/main.css">
+    <script src="src/program.js"></script>
+    <title>Finlay Christ</title>
+    <style>
+        #click-me-button {
+            font-size: 3em;
+            font-weight: bold;
+            background-color: rgb(100, 57, 29);
+            color: tan;
+            border-radius: 15px;
+            border: 15px;
+            margin: 0px;
+            padding: 10px;
+            user-select: none;
+            touch-action: manipulation;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="soundPlayer1" src="audio/Sound1.mp3" style="display: none;"></audio>
+    <audio id="soundPlayer2" src="audio/Sound2.mp3" style="display: none;"></audio>
+    <audio id="soundPlayer3" src="audio/Sound3.mp3" style="display: none;"></audio>
+
+    <header>
+        <h1>Finlay Christ</h1>
+
+        <nav>
+            <div id="nav-container">
+                <div class="nav-button" onclick="(window.location.href = 'index.html')">
+                    <p class="nav-link">Home</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'contact.html')">
+                    <p class="nav-link">Contact</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'intrests.html')">
+                    <p class="nav-link">About Me</p>
+                </div>
+                <div class="nav-button" onclick="(window.location.href = 'style.html')">
+                    <p class="nav-link">Style</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+
+            <article>
+                <h3>Game Development</h3>
+                <p>
+                    Outside of this class I do a lot of coding on other projects mostly in the C# programming language.
+                    I have been coding since I was like 10 and my dad first set me up with Scratch and Minecraft. Ever
+                    since I have be facinated by coding and have made several games and apps using the Unity game engine
+                    and Microsoft's XNA framwork.
+                </p>
+            </article>
+
+            <article>
+                <h3>Game Engine</h3>
+                <p>
+                    My latest project is a custom game engine written from scratch using C++ and the Win32 APIs. This
+                    game engine is my child and I have speant way to long on it. It's highly optimized for the best
+                    possible framerates and gets about 6,000 FPS on my GTX 1660 with a Ryzen 5 3600.
+                </p>
+            </article>
+
+            <article>
+                <h3>Open Source</h3>
+                <p>
+                    Best of all everything I coded is open source and availible for <b>free</b> on my
+                    <a target="_blank" href="https://github.com/RandomiaGaming/">Github!</a>
+                </p>
+                <img src="imgs/ItsFreeRealEstate.gif" alt="Animation of man saying &quot;It's free real estate.&quot;">
+            </article>
+
+            <article>
+                <h3>Greate Sense Of Humor</h3>
+                <button id="click-me-button" onclick="TrustMeClickIt()">💩 Click Me! 💩</button>
+                <p>
+                    I know it's suspicious but just click it...
+                    <br><br>
+                    Trust me bro it's not what you think...
+                    <br><br>
+                    I promise you won't regret it!
+                </p>
+            </article>
+
+            <article>
+                <h3>Legally Required List</h3>
+                <p>
+                    I am legally obligated to include an ordered list. So here is a list of some foods I ate this week
+                    in order of how good they were.
+                </p>
+                <ol>
+                    <li>Pizza - Pretty tasty and cheap too!</li>
+                    <li>Hash Browns - Absolutely epic but I've gotten sick of eating them every day.</li>
+                    <li>Beef Burger - Pretty good. Kinda expensive.</li>
+                    <li>Tofu - It's like meat but it tastes nothing like it.</li>
+                    <li>High Fiber Cereal - It's healthy so that makes it lame.</li>
+                </ol>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            This website was made by Finlay Christ for CS290 at Oregon State University in Spring of 2024.<br>
+            <span id="copy-symbole">&copy;</span> 2024 Finlay Christ - All rights reserved
+        </p>
+    </footer>
+</body>
+
+</html>
